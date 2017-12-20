@@ -290,6 +290,12 @@ html {
   margin-right: 10px;
   padding: 3px 5px;
   text-align: center;
+  cursor: pointer;
+}
+.cont .dish:hover {
+  color: #aa572a;
+  transition: ease .3s;
+  background-color: #f2eae1;
 }
 .cont .dish h4 {
   font-size: 20px;
@@ -329,6 +335,11 @@ html {
   background-size: cover;
   color: #f2eae1;
   padding-top: 100px;
+  cursor: pointer;
+}
+.cont .book:hover {
+  transform: scale(1.1);
+  z-index: 5;
 }
 .cont .book h5 {
   font-weight: bold;
@@ -403,6 +414,9 @@ html {
   display: inline-block;
   padding-left: 10px;
 }
+.cont .contact i {
+  cursor: pointer;
+}
 .cont .toTop {
   position: fixed;
   display: none;
@@ -473,5 +487,9 @@ html {
   }
   .cont .book {
     width: 100%;
+  }
+  .cont .contactMid {
+    border-top: 2px solid #f2eae1;
+    border-bottom: 2px solid #f2eae1;
   }
 }

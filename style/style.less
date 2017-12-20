@@ -288,6 +288,12 @@ body, html {
   		margin-right: 10px;
   		padding: 3px 5px;
   		text-align: center;
+      cursor: pointer;
+      &:hover {
+        color: #aa572a;
+        transition: ease .3s;
+        background-color: #f2eae1;
+      }
   		h4 {
   			font-size: 20px;
   			font-weight: bold;
@@ -327,6 +333,11 @@ body, html {
   		background-size: cover;
   		color: #f2eae1;
   		padding-top: 100px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        z-index: 5;
+      }
   		h5 {
   			font-weight: bold;
   		}
@@ -401,6 +412,9 @@ body, html {
   			display: inline-block;
         padding-left: 10px;
   		}
+      i {
+        cursor: pointer;
+      }
   	}
   	.toTop {
   		position: fixed;
@@ -425,55 +439,59 @@ body, html {
   		}
   		.header{
       		position: static;
-      	}
+      }
   		.headerMenu{
         	display: block;
         	top: 35px;
+      }
+      .head {
+      	cursor: pointer;
+      }
+      .navbars {
+      	width: 100%;
+      	max-height: 0;
+      	overflow: hidden;
+      	z-index: 10;
+      	position: absolute;
+      	margin: 0 auto;
+      	padding: 0;
+      	left: 0;
+      	top: 110px;
+      }
+      .navs_item {
+      	width: 80%;
+      	display: block;
+      	margin-right: 0px;
+      	text-align: center;
+      	margin: 0 auto;
+      	height: 30px;
+      	color: #666666;
+      	background: rgba(0, 0, 0, 0.8);
+       	font-size: 10px;
+      	font-weight: 300;
+      	letter-spacing: 2px;
+        box-sizing: content-box !important;
+      	&:hover{
+	        a {
+	         	color: red;
+	        }
       	}
-      	.head {
-      		cursor: pointer;
-      	}
-      	.navbars {
-        	width: 100%;
-        	max-height: 0;
-        	overflow: hidden;
-        	z-index: 10;
-        	position: absolute;
-        	margin: 0 auto;
-        	padding: 0;
-        	left: 0;
-        	top: 110px;
-        }
-        .navs_item {
-          	width: 80%;
-          	display: block;
-          	margin-right: 0px;
-          	text-align: center;
-          	margin: 0 auto;
-          	height: 30px;
-          	color: #666666;
-          	background: rgba(0, 0, 0, 0.8);
-          	font-size: 10px;
-          	font-weight: 300;
-          	letter-spacing: 2px;
-            box-sizing: content-box !important;
-          	&:hover{
-	            a {
-	              	color: red;
-	            }
-          	}
-        }
-        .sliderContainer {
-        	padding: 0;
-        }
-        .formContainer {
-        	width: 300px;
-        }
-        .costumer {
-        	margin-top: 5px;
-        }
-        .book {
-        	width: 100%;
-        }
+      }
+      .sliderContainer {
+      	padding: 0;
+      }
+      .formContainer {
+      	width: 300px;
+      }
+      .costumer {
+      	margin-top: 5px;
+      }
+      .book {
+      	width: 100%;
+      }
+      .contactMid {
+        border-top: 2px solid #f2eae1;
+        border-bottom: 2px solid #f2eae1;
+      }
   	}
 }

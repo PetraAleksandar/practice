@@ -87,6 +87,11 @@ $(function(){
     e.stopPropagation();
     $("#navs").toggleClass('navActive');
   });
+  $win.scroll(function () {
+    if ($win.scrollTop() >= 500) {
+      $("#navs").toggleClass('navActive');
+    }
+  });
 
   //TO TOP CODE
 
