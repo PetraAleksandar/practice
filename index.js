@@ -74,7 +74,8 @@ $(function(){
       $info.append("<h1>Email nije validan!</h1>");
     } else {
       $info.empty();
-      
+      $('.formContainer').remove();
+      $info.append("<h1>Uspesno logovanje</h1><i class='fa fa-check fa-4x' aria-hidden='true'></i>");
     }
     $win.scrollTop(($info.offset().top - 110));
   });
@@ -90,6 +91,13 @@ $(function(){
   //TO TOP CODE
 
   var $top = $('.toTop');
+  $win.scroll(function () {
+    if ($win.scrollTop() >= 1300) {
+      $top.show(500);
+    } else {
+      $top.hide(500);
+    }
+  });
   $top.on('click', function (e) {
     e.preventDefault();
     $("html, body").animate({scrollTop:"0"},600);
