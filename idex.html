@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="build/main.css">
+	<link rel="stylesheet" href="style/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	
+
+</head>
+<body>
+	<div class="cont">
+		<div class="headerContainer">
+			<div class="header">
+				<div class="headerMenu">
+					<i class="fa fa-bars fa-2x head" aria-hidden="true"></i>
+				</div>
+				<ul class="navbars" id="navs">
+					<li class="navs_item"><a href="#">NASLOVNICA</a></li>
+          			<li class="navs_item"><a href="#">PROIZVODI</a></li>
+          			<li class="navs_item"><a href="#">TEHNOLOGIJA</a></li>
+          			<li class="navs_item"><a href="#">GALERIJA</a></li>
+          			<li class="navs_item"><a href="#">O NAMA</a></li>
+          			<li class="navs_item"><a href="#">KONTAKT</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="sliderContainer" >
+      		<div class="slider fader" style="background-image: url(content/first.jpg);">
+        	</div>
+	      	<div class="slider fader" style="background-image: url(content/second.jpg);">
+	        </div>
+      		<div class="slider fader" style="background-image: url(content/third.jpg);">
+      		</div>
+      		<a class="prev" onclick="plusSlides(-1)"><div class="arrows pr"></div></a>
+      		<a class="next" onclick="plusSlides(1)"><div class="arrows ne"></div></a>
+	      	<div class="dotsContainer">
+	        	<div class="dot one" onclick="currentSlide(1)"></div>
+	        	<div class="dot two" onclick="currentSlide(2)"></div>
+	        	<div class="dot three" onclick="currentSlide(3)"></div>
+	      	</div>
+		</div>
+
+		<div class="aboutContainer">
+			<div class="aboutHeader">
+				<h1> About us </h1>
+				<p>From day one we serves the traditional food of this country at its best - and at affordable prices. We are fourunate that we are stationed near Sava river which makes our rastaurant even better with extraordinary deck view.</p>
+			</div>
+			<div class="aboutFooter row">
+				<div class="first col-sm">
+					<h3>Our Beginnings</h1>
+					<p>Restaurant is founded in 1995 by Mark bing, a American-born Serbian. This restaurant, located a short walk from the kalemegdan, was the first modern restaurant that was in Belgrade.</p>
+					<p class="read">Read more</p>
+				</div>
+				<div class="second col-sm">
+					<h3>Our Beginnings</h1>
+					<p>Restaurant is founded in 1995 by Mark bing, a American-born Serbian. This restaurant, located a short walk from the kalemegdan, was the first modern restaurant that was in Belgrade.</p>
+					<p class="read">Read more</p>
+				</div>
+				<div class="third col-sm">
+					<h3>Our Beginnings</h1>
+					<p>Restaurant is founded in 1995 by Mark bing, a American-born Serbian. This restaurant, located a short walk from the kalemegdan, was the first modern restaurant that was in Belgrade.</p>
+					<p class="read">Read more</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="specialsContainer">
+			<div class="menuContainer">
+				<div class="menu-icon"><i class="fa fa-share fa-3x" aria-hidden="true"></i></div>
+				<div class="menu-bar">
+  					<div class="menu-heading">Menu</div>
+  					<div class="menu-body">
+    					<div><a href="#">Home</a><i class="fa fa-sort-desc" aria-hidden="true" id="drop"></i>
+    						<div class="insideMenu">
+    							<a href="#">Adress</a>
+    						</div>
+    					</div>
+    					<a href="#">Portfolio</a>
+    					<a href="#">Some Link</a>
+  					</div>
+				</div>
+			</div>	
+			<div class="specialsHeader">
+				<h2>Our specials</h2>
+				<hr>
+				<div class="row">
+					<div class="col-sm dish"><h4>Appetisers</h4></div>
+					<div class="col-sm dish"><h4>Main dishes</h4></div>
+					<div class="col-sm dish"><h4>Desserts</h4></div>
+				</div>
+			</div>
+			<div class="specialsFooter">	
+				<div class="row">
+					<div class="col-md">
+						<img src="content/dinnerFirst.jpg">
+						<p>Considering that tomato is a fruit, the addition of strawberries isn't that strange in this sauce from Mark's Luxury. the sauce should be quite spicy, which temperes the berries' sweethness</p>
+					</div>
+					<div class="col-md">
+						<img src="content/dinnerSecond.jpg">
+						<p>Considering that tomato is a fruit, the addition of strawberries isn't that strange in this sauce from Mark's Luxury. the sauce should be quite spicy, which temperes the berries' sweethness</p>
+					</div>
+					<div class="col-md">
+						<img src="content/dinnerThird.jpg">
+						<p>Considering that tomato is a fruit, the addition of strawberries isn't that strange in this sauce from Mark's Luxury. the sauce should be quite spicy, which temperes the berries' sweethness</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bookingContainer">
+			<h2>Book your table now</h2>
+			<hr>
+			<div class="row">
+				<div class="col-md book" style="background-image: url('content/bookFirst.jpeg');"><h5>Dinner</h5></div>
+				<div class="col-md book" style="background-image: url('content/bookSecond.jpg');"><h5>Dinner deck</h5></div>
+				<div class="col-md book" style="background-image: url('content/bookThird.jpg');"><h5>Lounge</h5></div>
+				<div class="col-md book" style="background-image: url('content/bookFourth.jpg');"><h5>Bar</h5></div>
+			</div>
+			<div class="bookPic" style="background-image: url('content/restaurant.jpg');">
+				<div class="row">
+					<div class="col-sm costumer">
+						<i class="fa fa-users fa-2x" aria-hidden="true"></i><h5>1500<br>Satisfied costumers</h5>
+					</div>
+					<div class="col-sm costumer">
+						<i class="fa fa-cutlery fa-2x" aria-hidden="true"></i><h5>350<br>Meal served per day</h5>
+					</div>
+					<div class="col-sm costumer">
+						<i class="fa fa-star fa-2x" aria-hidden="true"></i><h5>5<br>Costumers rating</h5>
+					</div>	
+				</div>
+			</div>
+			<div class="info"></div>
+			<div class="formContainer">
+				<form>
+					<div class="form-group">
+	    				<label for="inputUser">Username</label>
+	    				<input type="name" class="form-control" id="inputUser" aria-describedby="userHelp" placeholder="Enter username">
+	  				</div>
+					<div class="form-group">
+	    				<label for="inputEmail">Email address</label>
+	    				<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+	  				</div>
+				  	<div class="form-group">
+				    	<label for="inputPassword">Password</label>
+				    	<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+				  	</div>
+				  	<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="mapContainer" style="background-image: url('content/map.jpg');">
+			<div class="contactContainer">
+				<div class="row">
+					<div class="col-sm contact">
+						<h3>Contact us</h3>
+						<i class="fa fa-phone-square" aria-hidden="true"></i><p>(+381)011254545</p><br> 
+						<i class="fa fa-phone-square" aria-hidden="true"></i> <p>(+381)062254545</p><br>
+						<i class="fa fa-map-marker" aria-hidden="true"></i> <p>Vojvode Putnika 21</p><br>
+						<i class="fa fa-envelope" aria-hidden="true"></i> <p>info@gmail.com</p>
+					</div>
+					<div class="col-sm-5 contactMid"><h2>Write your review<br> or visit us at</h2></div>
+					<div class="col-sm contact">
+						<h3>Follow us</h3>
+						<div class="row">
+							<div class="col"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></div>
+    						<div class="col"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></div>
+    						<div class="w-100"></div>
+    						<div class="col"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></div>
+    						<div class="col"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></div>
+						</div>	
+    				</div>			
+				</div>
+			</div>
+			<div class="toTop">
+				<i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

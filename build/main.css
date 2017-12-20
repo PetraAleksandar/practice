@@ -1,0 +1,470 @@
+/* VARIABLES */
+*,
+::after,
+::before {
+  box-sizing: content-box;
+}
+body,
+html {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+/* CONTENT STYLE */
+.cont {
+  margin: 0;
+  padding: 0;
+}
+.cont .headerContainer {
+  overflow: hidden;
+  background-color: white;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  margin: 0 auto;
+  z-index: 1;
+  transition: 0.6s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cont .header {
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.cont .headerMenu {
+  display: none;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.cont .navbars {
+  margin: 0 auto;
+  top: 0;
+  transition: max-height 0.5s linear;
+}
+.cont .navbars.navActive {
+  max-height: 700px;
+}
+.cont .navbars .navs_item {
+  display: inline-block;
+  text-align: center;
+  padding-top: 45px;
+  width: inherit;
+  font-size: 12px;
+  border-top: 4px solid white;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+.cont .navbars .navs_item:hover {
+  border-top: 4px solid red;
+}
+.cont .navbars .navs_item:hover a {
+  color: #181818;
+}
+.cont .navbars .navs_item a {
+  text-decoration: none;
+  color: #c0c0c0;
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+.cont .sliderContainer {
+  top: 0;
+  left: 0;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 100px;
+}
+.cont .slider {
+  display: none;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+}
+.cont .sliderImage {
+  display: block;
+  width: 100%;
+  height: 700px;
+}
+.cont .fader {
+  animation-name: fader;
+  animation-duration: 1s;
+}
+@keyframes fader {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cont .prev,
+.cont .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50vh;
+  width: auto;
+  padding: 16px;
+  border-radius: 0 3px 3px 0;
+}
+.cont .prev .arrows,
+.cont .next .arrows {
+  width: 30px;
+  height: 30px;
+  color: #909090;
+  position: absolute;
+  transition: 0.6s ease;
+}
+.cont .prev .arrows:hover,
+.cont .next .arrows:hover {
+  color: white;
+}
+.cont .prev .pr,
+.cont .next .pr {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 50px;
+}
+.cont .prev .ne,
+.cont .next .ne {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-135deg);
+  right: 50px;
+}
+.cont .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.cont .dotsContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.cont .dotsContainer .dot {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin: 0 7px 0 7px;
+  background-color: #909090;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 1px #000000;
+  transition: background-color 0.6s ease;
+}
+.cont .dotsContainer .active {
+  background-color: black;
+  box-shadow: none;
+}
+.cont .menuContainer {
+  width: 200px;
+  z-index: 10;
+}
+.cont .menu-icon {
+  color: #000;
+}
+.cont .menu-icon i {
+  cursor: pointer;
+}
+.cont .menu-bar {
+  position: absolute;
+  z-index: 10;
+  width: 300px;
+  background-color: #555;
+  color: #fff;
+  transition: transform ease .3s;
+  left: 0;
+  transform: translateX(-300px);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+.cont .menu-bar.is-active {
+  transform: translateX(0);
+  transition: transform ease .3s;
+}
+.cont .menu-heading {
+  width: 100%;
+  font-size: 2em;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.cont .menu-body a {
+  text-decoration: none;
+  outline: 0;
+  color: #fff;
+  width: calc(80%);
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background ease .3s;
+}
+.cont .menu-body a:hover {
+  background: #333;
+  transition: background ease .3s;
+}
+.cont .insideMenu {
+  display: none;
+}
+.cont .insideMenu a {
+  background-color: #222;
+}
+.cont .insideMenu.is-active {
+  display: block;
+}
+.cont .aboutContainer {
+  width: 100%;
+  margin: 0 auto;
+  color: #513717;
+  background-color: #f2eae1;
+}
+.cont .aboutHeader {
+  text-align: center;
+  padding: 50px 0 30px 0;
+  width: 60%;
+  margin: 0 auto;
+}
+.cont .aboutFooter {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+.cont .aboutFooter .first,
+.cont .aboutFooter .second,
+.cont .aboutFooter .third {
+  text-align: center;
+}
+.cont .aboutFooter .read {
+  margin: 0 auto;
+  cursor: pointer;
+  width: fit-content;
+  border-bottom: 3px solid #990000;
+  border-top: 3px solid #990000;
+}
+.cont .specialsContainer {
+  background-color: #513717;
+  color: #f2eae1;
+}
+.cont .specialsHeader {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cont .specialsHeader h2 {
+  font-weight: 800;
+  font-size: 35px;
+  margin: 0;
+}
+.cont .specialsHeader hr {
+  height: 2px;
+  width: inherit;
+  background-color: #f2eae1;
+  margin-top: 0;
+}
+.cont .specialsFooter {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cont .specialsFooter img {
+  width: inherit;
+  height: 250px;
+}
+.cont .dish {
+  border: 2px solid #f2eae1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 3px 5px;
+  text-align: center;
+}
+.cont .dish h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cont .bookingContainer {
+  background-color: #f2eae1;
+  text-align: center;
+  color: #513717;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.cont .bookingContainer hr {
+  width: 50%;
+  margin-top: 0;
+  height: 2px;
+  background-color: #513717;
+}
+.cont .bookingContainer h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.cont .bookingContainer .row {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.cont .costumer {
+  margin-top: 170px;
+  color: #f2eae1;
+}
+.cont .book {
+  width: 200px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f2eae1;
+  padding-top: 100px;
+}
+.cont .book h5 {
+  font-weight: bold;
+}
+.cont .bookPic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 95%;
+  height: 400px;
+  margin: 20px auto;
+}
+.cont .bookPic .row {
+  width: 100%;
+}
+.cont .formContainer {
+  padding-top: 25px;
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #999;
+  border-radius: 5px;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+}
+.cont .formContainer form {
+  width: 200px;
+  margin: 0 auto;
+}
+.cont .formContainer input {
+  width: 200px;
+  height: 30px;
+  margin: 20px 0;
+}
+.cont .formContainer .btn {
+  width: 100%;
+  outline: 0;
+  margin: 10px 0;
+  padding: 10px;
+}
+.cont .mapContainer {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+.cont .contactContainer {
+  color: #f2eae1;
+  background-color: #513717;
+  width: 95%;
+  margin: 0 auto;
+}
+.cont .contactContainer p {
+  margin: 0;
+  width: fit-content;
+}
+.cont .contactMid {
+  text-align: center;
+  border-left: 2px solid #f2eae1;
+  border-right: 2px solid #f2eae1;
+}
+.cont .contact h3 {
+  text-align: center;
+}
+.cont .contact .row {
+  width: 70%;
+  margin: 0 auto;
+}
+.cont .contact i,
+.cont .contact p {
+  display: inline-block;
+}
+.cont .toTop {
+  position: absolute;
+  right: 2%;
+  bottom: 150px;
+  height: 50px;
+  width: 50px;
+  background-color: #513717;
+  cursor: pointer;
+  box-shadow: 0 8px 6px -6px black;
+}
+@media (max-width: 768px) {
+  .cont .headerContainer {
+    padding: 0;
+    position: static;
+    height: 110px;
+  }
+  .cont .header {
+    position: static;
+  }
+  .cont .headerMenu {
+    display: block;
+    top: 35px;
+  }
+  .cont .head {
+    cursor: pointer;
+  }
+  .cont .navbars {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 10;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    top: 110px;
+  }
+  .cont .navs_item {
+    width: 80%;
+    display: block;
+    margin-right: 0px;
+    text-align: center;
+    margin: 0 auto;
+    height: 30px;
+    color: #666666;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .cont .navs_item:hover a {
+    color: $red;
+  }
+  .cont .sliderContainer {
+    padding: 0;
+  }
+  .cont .formContainer {
+    width: 300px;
+  }
+  .cont .costumer {
+    margin-top: 5px;
+  }
+  .cont .book {
+    width: 100%;
+  }
+}
