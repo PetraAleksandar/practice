@@ -1,4 +1,5 @@
-var slideIndex = 1;
+//JS SLIDER CODE
+/*var slideIndex = 1;
 showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -10,6 +11,7 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("slider");
   var dots = document.getElementsByClassName("dot");
+  console.log(slides);
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -20,6 +22,35 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}*/
+
+//JQUERY SLIDER CODE
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i, slides, dots;
+  var slider = $('.slider');
+  var dot = $('.dot');
+  if (n > slider.length) {slideIndex = 1};
+  if (n < 1) {slideIndex = slider.length};
+  for (i = 0; i < slider.length; i++) {
+    slides = $(slider[i]);
+    slides.css('display', 'none');
+  };
+  for (i = 0; i < dot.length; i++) {
+    dots = $(dot[i]);
+    dots.removeClass('active');
+  };
+  slides = $(slider[slideIndex - 1]);
+  slides.css('display', 'block');
+  dots = $(dot[slideIndex - 1]);
+  dots.addClass('active');
 }
 
 $(function(){
@@ -89,7 +120,9 @@ $(function(){
   });
   $win.scroll(function () {
     if ($win.scrollTop() >= 500) {
-      $("#navs").toggleClass('navActive');
+      if ($("#navs").hasClass('navActive')) {
+        $("#navs").removeClass('navActive');
+      }
     }
   });
 
